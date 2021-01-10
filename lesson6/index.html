@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>xxxxx</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>douban lesson6 豆瓣</h1>
+            <div>
+                <p class="tx" id="tx">inner element x</p>
+            </div>
+            <button onclick="test()" >click me</button>
+            <a href="https://www.baidu.com" >xxxx</a>
+            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3895630235,4212690360&fm=26&gp=0.jpg" />
+        </div>
+        <script>
+            function test() {
+                var ele = document.getElementById("tx");
+                console.log(ele.innerHTML);
+                ele.innerHTML = "new content";
+                var newEle = document.createElement("p");
+                newEle.innerHTML = "new Content xxxx";
+                ele.parentElement.appendChild(newEle);
+            }
+        </script>
+        <style>
+            .container {
+                width: 800px;
+                /* margin-left: 200px;
+                padding-left: 100px; */
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+            }
+            .tx {
+                font-size: 18px;
+                line-height: 28px;
+                max-height: 56px;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                font-weight: 600;
+                color: red;
+            }
+        </style>
+    </body>
+</html>
